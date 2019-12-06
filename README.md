@@ -25,7 +25,7 @@
 1. Clone the repository whatever you want using:
 
 ```
-git clone git@github.com:patrickemuller/dotfiles-git-bash.git
+git clone git@github.com:patrickemuller/dotfiles-linux.git
 ```
 
 2. Run the command sh to copy files to your $HOME directory:
