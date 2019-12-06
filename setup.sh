@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Installing Git Auto Completion"
+
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
 declare file=""
 declare i=""
 declare -r -a FILES_TO_SOURCE=(
