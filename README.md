@@ -4,6 +4,10 @@
 
 - Install [Tilix Terminal](https://gnunn1.github.io/tilix-web/)
 
+## Recommendations
+
+- If you want a very useful Git GUI you can use [Sublime Merge](https://www.sublimemerge.com/docs/linux_repositories#apt)
+
 ## What is included in this Dotfiles?
 
 - Auto completion from history (start typing the command and use arrow keys to autocomplete)
