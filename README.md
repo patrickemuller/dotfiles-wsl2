@@ -11,6 +11,7 @@
 ## What is included in this Dotfiles?
 
 - Auto completion from history (start typing the command and use arrow keys to autocomplete)
+- Auto completion for Git commands
 - Alias for Git commands
 - Alias for Rails commands
 - tilix.dconf file to match usual commands from iTerm on MacOS
