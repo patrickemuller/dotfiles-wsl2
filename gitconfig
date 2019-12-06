@@ -1,0 +1,29 @@
+[color "branch"]
+    current = green bold
+    local = green
+    remote = yellow
+
+[color "diff"]
+    frag = magenta
+    meta = yellow
+    new = green
+    old = red
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[core]
+    attributesfile = ~/.gitattributes
+    autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitignore
+
+[pretty]
+    custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+    #                     │        │            │            │             └─ author name
+    #                     │        │            │            └─ message
+    #                     │        │            └─ date (relative)
+    #                     │        └─ decorations (branch, heads or tags)
+    #                     └─ hash (abbreviated)
