@@ -22,4 +22,7 @@ for i in ${!FILES_TO_SOURCE[*]}; do
   cp -r ${FILES_TO_SOURCE[$i]} $file
 done
 
+echo "Restoring Tilix configuration ..."
+dconf load /com/gexperts/Tilix/ < tilix.dconf
+
 echo "Done!"

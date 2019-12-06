@@ -13,7 +13,7 @@
 
 ## Example of actual PS1
 
-![capture](https://user-images.githubusercontent.com/1644530/50055394-79363180-0135-11e9-9d6f-9b09a72d68c8.PNG)
+![Capture](https://user-images.githubusercontent.com/1644530/70286076-7601de80-17a8-11ea-9a33-e3071249dae9.png)
 
 
 ## Installation
@@ -30,10 +30,4 @@ git clone git@github.com:patrickemuller/dotfiles-git-bash.git
 sh setup.sh
 ```
 
-3. Use the Tilix configuration
-
-```
-dconf load /com/gexperts/Tilix/ < tilix.dconf
-```
-
-4. Restart your Terminal
+3. Restart your Terminal
