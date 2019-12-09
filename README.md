@@ -36,3 +36,8 @@ sh setup.sh
 ```
 
 3. Restart your Terminal
+
+## Other programs worth installing
+
+- [Albert](https://albertlauncher.github.io/docs/installing/), a substitute for Alfred from MacOS
+- [MacOS Theme](https://github.com/btd1337/eOS-Sierra-Gtk)
