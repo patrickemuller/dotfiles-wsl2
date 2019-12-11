@@ -18,7 +18,7 @@
 
 ## Example of actual PS1
 
-![Capture](https://user-images.githubusercontent.com/1644530/70286076-7601de80-17a8-11ea-9a33-e3071249dae9.png)
+![Screenshot from 2019-12-11 11-56-33](https://user-images.githubusercontent.com/1644530/70632392-7f0e0800-1c0d-11ea-99ac-044d9d06335e.png)
 
 
 ## Installation
