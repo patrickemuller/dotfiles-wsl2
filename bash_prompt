@@ -4,7 +4,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo " (${BRANCH}${STAT})"
+		echo " (${BRANCH}${STAT}) "
 	else
 		echo ""
 	fi
@@ -45,4 +45,16 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\W\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\] : \A \n$ "
+PS1="\[\033]0;\W\007\]" # Terminal title (set to the current working directory)
+PS1+='\n'               # new line
+PS1+='\[\033[32m\]'     # change to green
+PS1+='\u '              # user@host<space>
+PS1+='\[\033[0;33m\]'   # change to brownish yellow
+PS1+='\w'               # current working directory
+PS1+="\[\e[m\]\[\e[0;34m\]\`parse_git_branch\`\[\e[m\]"
+PS1+="\[\e[1;31m\][\t]"
+PS1+='\[\033[0m\]'      # change color
+PS1+='\n'               # new line
+PS1+='$ '               # prompt: always $
+
+export PS1
