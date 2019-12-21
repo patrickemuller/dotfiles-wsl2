@@ -32,7 +32,7 @@ git clone git@github.com:patrickemuller/dotfiles-linux.git
 2. Run the command sh to copy files to your $HOME directory:
 
 ```
-sh setup.sh
+./setup.sh
 ```
 
 3. Restart your Terminal
