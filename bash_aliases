@@ -83,8 +83,7 @@ alias open="start"
 # ----------------------------------------------------------------------
 
 alias dc="docker-compose"
-alias de="docker exec -it"
-alias dc-rspec="docker-compose run rails bin/rspec"
-alias rspec="docker-compose exec web bin/rspec"
-alias dc-rubocop="docker-compose run rails bin/rubocop"
-alias rubocop="docker-compose run web bin/rubocop"
+alias dcr="docker-compose run"
+alias dce="docker exec -it"
+alias rspec="docker-compose exec web bundle exec rspec"
+alias rubocop="docker-compose exec web bundle exec rubocop"
