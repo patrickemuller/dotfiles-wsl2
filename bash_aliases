@@ -68,11 +68,8 @@ alias reset_prod_db="heroku pg:reset --remote production DATABASE && heroku run 
 
 alias :q="exit"
 alias c="clear"
-alias ch="history -c && > ~/.bash_history"
-alias e="vim"
 alias g="git"
 alias ll="ls -l"
-alias m="man"
 alias map="xargs -n1"
 alias q="exit"
 alias rm="rm -rf"

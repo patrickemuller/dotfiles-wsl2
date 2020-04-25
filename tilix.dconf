@@ -1,6 +1,7 @@
 [/]
 new-window-inherit-state=true
 middle-click-close=true
+terminal-title-style='normal'
 theme-variant='dark'
 session-name='Terminal'
 control-scroll-zoom=true
@@ -11,7 +12,7 @@ window-style='borderless'
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#F8F8F2'
 visible-name='Default'
-palette=['#272822', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F8F8F2', '#75715E', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F9F8F5']
+palette=['#272822', '#EF2929', '#4E9A06', '#F57900', '#729FCF', '#75507B', '#A1EFE4', '#888A85', '#75715E', '#EF2929', '#4E9A06', '#F57900', '#729FCF', '#75507B', '#A1EFE4', '#888A85']
 badge-color-set=false
 use-system-font=false
 cursor-colors-set=false
@@ -19,8 +20,8 @@ highlight-colors-set=false
 use-theme-colors=false
 bold-color-set=false
 font='Monospace 14'
-background-color='#2E2E34343636'
-background-transparency-percent=2
+background-color='#284653'
+background-transparency-percent=3
 dim-transparency-percent=0
 scrollback-lines=1000
 

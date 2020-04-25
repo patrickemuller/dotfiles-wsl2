@@ -8,15 +8,9 @@ declare file=""
 declare i=""
 declare -r -a FILES_TO_SOURCE=(
   "gitconfig"
-  "bash_aliases"
   "bash_exports"
   "bash_functions"
-  "bash_logout"
-  "bash_options"
-  "bash_profile"
-  "bash_prompt"
-  "bashrc"
-  "inputrc"
+  "zshrc"
 )
 
 # copy bash_files

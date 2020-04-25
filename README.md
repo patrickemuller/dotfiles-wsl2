@@ -2,42 +2,48 @@
 
 ## Pre-requisites
 
+- Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
+- Install [Powerline Fonts](https://github.com/powerline/fonts)
 - Install [Tilix Terminal](https://gnunn1.github.io/tilix-web/)
-
-## Recommendations
-
-- If you want a very useful Git GUI you can use [Sublime Merge](https://www.sublimemerge.com/docs/linux_repositories#apt)
 
 ## What is included in this Dotfiles?
 
 - Auto completion from history (start typing the command and use arrow keys to autocomplete)
 - Auto completion for Git commands
-- Alias for Git commands
-- Alias for Rails commands
+- Alias for Git, Rails, Docker & some useful functions to be used on terminal
 - tilix.dconf file to match usual commands from iTerm on MacOS
 
-## Example of actual PS1
+## Screenshot of terminal
 
 ![Screenshot from 2019-12-11 11-56-33](https://user-images.githubusercontent.com/1644530/70632392-7f0e0800-1c0d-11ea-99ac-044d9d06335e.png)
 
 
 ## Installation
 
-1. Clone the repository whatever you want using:
+1. Install some Oh My ZSH plugins
 
+```shell
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
-git clone git@github.com:patrickemuller/dotfiles-linux.git
+
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+```shell
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+```
+
+2. Clone the repository whatever you want using:
+
+```shell
+git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
 ```
 
 2. Run the command sh to copy files to your $HOME directory:
 
-```
+```shell
 ./setup.sh
 ```
 
-3. Restart your Terminal
-
-## Other programs worth installing
-
-- [Albert](https://albertlauncher.github.io/docs/installing/), a substitute for Alfred from MacOS
-- [MacOS Theme](https://github.com/btd1337/eOS-Sierra-Gtk)
+1. Logout from your user and login back
