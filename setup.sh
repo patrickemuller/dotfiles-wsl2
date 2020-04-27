@@ -8,7 +8,7 @@ declare file=""
 declare i=""
 declare -r -a FILES_TO_SOURCE=(
   "gitconfig"
-  "bash_exports"
+  "bash_aliases"
   "bash_functions"
   "zshrc"
 )
