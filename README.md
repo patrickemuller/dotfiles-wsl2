@@ -34,7 +34,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 ```
 
-2. Clone the repository whatever you want using:
+I'm using the powerlevel10k theme for my ZSH
+
+```shell
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+1. Clone the repository whatever you want using:
 
 ```shell
 git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git

@@ -11,6 +11,7 @@ declare -r -a FILES_TO_SOURCE=(
   "bash_aliases"
   "bash_functions"
   "zshrc"
+  "p10k.zsh"
 )
 
 # copy bash_files
