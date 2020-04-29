@@ -15,7 +15,7 @@
 
 ## Screenshot of terminal
 
-![Screenshot from 2019-12-11 11-56-33](https://user-images.githubusercontent.com/1644530/70632392-7f0e0800-1c0d-11ea-99ac-044d9d06335e.png)
+![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/80638023-33ca8980-8a36-11ea-9cae-2ea7dc9d8a02.jpeg)
 
 
 ## Installation
@@ -29,6 +29,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
+
+K is a plugin for a better LS commands on terminal
 
 ```shell
 git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
