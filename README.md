@@ -15,7 +15,7 @@
 
 ## Screenshot of terminal
 
-![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/80638023-33ca8980-8a36-11ea-9cae-2ea7dc9d8a02.jpeg)
+![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/81022753-ceff9c80-8e44-11ea-85d3-acf618fbd9e5.png)
 
 
 ## Installation
