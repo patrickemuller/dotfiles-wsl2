@@ -3,8 +3,7 @@
 ## Pre-requisites
 
 - Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
-- Install [Powerline Fonts](https://github.com/powerline/fonts)
-- Install [Tilix Terminal](https://gnunn1.github.io/tilix-web/)
+- Install [Tilix Terminal](https://gnunn1.github.io/tilix-web)
 
 ## What is included in this Dotfiles?
 
@@ -21,38 +20,47 @@
 
 ## Installation
 
-1. Install some Oh My ZSH plugins
+Install some Oh My ZSH plugins
 
 ```shell
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+$ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 ```
+
+I'm using the powerlevel10k theme for my ZSH, so you gonna need to install the recommended fonts (I'm installing all
+of them, just in case, but the DOWNLOAD IS HUGE, more than 6 GiB of fonts)
+
+Automatic script for fonts
+```shell
+$ cd ~/Downloads
+$ git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh
+```
+
+Manual installation for fonts
+
+Check this link to original Powerline10k instructions
+
+https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+
+
+Now you can install the Powerlevel10k Theme for ZSH
+```shell
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Clone the repository whatever you want using:
 
 ```shell
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
 ```
 
-K is a plugin for a better LS commands on terminal
+Run the command sh to copy files to your $HOME directory:
 
 ```shell
-git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+$ ./setup.sh
 ```
 
-I'm using the powerlevel10k theme for my ZSH
-
-```shell
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-1. Clone the repository whatever you want using:
-
-```shell
-git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
-```
-
-2. Run the command sh to copy files to your $HOME directory:
-
-```shell
-./setup.sh
-```
-
-1. Logout from your user and login back
+Logout from your user and login back so the configs can take effect
