@@ -12,6 +12,7 @@
 - Auto completion for Git commands
 - Alias for Git, Rails, Docker & some useful functions to be used on terminal
 - tilix.dconf file to match usual commands from iTerm on MacOS
+- TLP config file to improve battery life on INTEL processors (can may work for AMD processors)
 
 ## Screenshot of terminal
 
