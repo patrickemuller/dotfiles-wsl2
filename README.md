@@ -1,9 +1,17 @@
-# Dotfiles and aliases for Linux
+# Dotfiles, aliases & development settings for Linux
 
 ## Pre-requisites
 
 - Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
 - Install [Tilix Terminal](https://gnunn1.github.io/tilix-web)
+
+## Optional steps
+
+- Install [Apt Fast](http://patrickemuller.com/posts/installing-apt-fast-on-ubuntu)
+- Install [TLP & TLP GUI](http://patrickemuller.com/posts/tlp-config-file-for-intel-processors)
+- Install [Conky & Conky manager](https://github.com/patrickemuller/dotfiles-linux-oh-my-zsh/wiki/Conky-Manager)
+- Install [SimpleC skin for Conky](https://github.com/patrickemuller/conky-simplec-one)
+- Download [a nice wallpaper](https://wallpaperflare.com)
 
 ## What is included in this Dotfiles?
 
@@ -17,10 +25,9 @@
 
 ![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/81022753-ceff9c80-8e44-11ea-85d3-acf618fbd9e5.png)
 
-
 ## Installation
 
-Install some Oh My ZSH plugins
+### Install some Oh My ZSH plugins
 
 ```shell
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
@@ -31,34 +38,35 @@ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 I'm using the powerlevel10k theme for my ZSH, so you gonna need to install the recommended fonts (I'm installing all
 of them, just in case, but the DOWNLOAD IS HUGE, more than 6 GiB of fonts)
 
-Automatic script for fonts
+### Automatic script for fonts
+
 ```shell
-$ cd ~/Downloads
-$ git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh
+cd ~/Downloads
+git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh
 ```
 
-Manual installation for fonts
+### Manual installation for fonts
 
 Check this link to original Powerline10k instructions
 
 https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
+### Now you can install the Powerlevel10k Theme for ZSH
 
-Now you can install the Powerlevel10k Theme for ZSH
 ```shell
-$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 Clone the repository whatever you want using:
 
 ```shell
-$ git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
+git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
 ```
 
 Run the command sh to copy files to your $HOME directory:
 
 ```shell
-$ ./setup.sh
+./setup.sh
 ```
 
 Logout from your user and login back so the configs can take effect
