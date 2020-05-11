@@ -23,11 +23,9 @@
 Install some Oh My ZSH plugins
 
 ```shell
-$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-
-$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-$ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 ```
 
 I'm using the powerlevel10k theme for my ZSH, so you gonna need to install the recommended fonts (I'm installing all
