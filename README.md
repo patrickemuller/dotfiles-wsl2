@@ -3,6 +3,7 @@
 ## Pre-requisites
 
 - Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
+  - PS.: You can ignore the startup configuration. Just leave the configuration empty, those things will be setup when `./install.sh` runs
 - Install [Tilix Terminal](https://gnunn1.github.io/tilix-web)
 
 ## Optional steps
