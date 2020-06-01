@@ -84,3 +84,9 @@ alias dcr="docker-compose run"
 alias dce="docker exec -it"
 alias rspec="docker-compose exec web bundle exec rspec"
 alias rubocop="docker-compose exec web bundle exec rubocop"
+
+# ----------------------------------------------------------------------
+# | System wide commands                                               |
+# ----------------------------------------------------------------------
+
+alias install="sudo apt-fast install -y"
