@@ -89,4 +89,5 @@ alias rubocop="docker-compose exec web bundle exec rubocop"
 # | System wide commands                                               |
 # ----------------------------------------------------------------------
 
+alias update="sudo apt-fast update"
 alias install="sudo apt-fast install -y"
