@@ -21,7 +21,9 @@ echo "Installing Git Auto Completion"
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
 echo "Installing APT FAST"
-/bin/bash -c "$(curl -sL https://git.io/vokNn)"
+sudo add-apt-repository ppa:apt-fast/stable
+sudo apt-get update
+sudo apt-get -y install apt-fast
 
 echo "Installing Gnome Tweaks Tool"
 sudo apt-fast -y install gnome-tweaks
