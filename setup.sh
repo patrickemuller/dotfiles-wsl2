@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Installing Git Auto Completion"
-
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-
 declare file=""
 declare i=""
 declare -r -a FILES_TO_SOURCE=(
@@ -21,11 +17,36 @@ for i in ${!FILES_TO_SOURCE[*]}; do
   cp -r ${FILES_TO_SOURCE[$i]} $file
 done
 
-echo "Copying TLP config file ..."
-sudo cp tlp.conf /etc/tlp.conf
+echo "Installing Git Auto Completion"
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
-echo "Restoring Tilix configuration ..."
+echo "Installing APT FAST"
+/bin/bash -c "$(curl -sL https://git.io/vokNn)"
+
+echo "Install Tilix & restore configuration ..."
+sudo apt-fast -y install tilix
 dconf load /com/gexperts/Tilix/ < tilix.dconf
+
+echo "Installing basic ZSH plugins"
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+
+echo "Installing Powerlevel10k ZSH theme"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "Downloading GitKraken Git GUI on ~/Downloads"
+curl -fsSL https://release.gitkraken.com/linux/gitkraken-amd64.deb -o ~/Downloads/git_kraken.deb
+
+echo "Downloading Slack on ~/Downloads"
+curl -fsSL https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.3-amd64.deb -o ~/Downloads/slack.deb
+
+echo "Installing Docker & Docker Compose"
+curl -fsSL https://get.docker.com -o ~/Downloads/get-docker.sh
+sudo sh ~/Downloads/get-docker.sh
+sudo usermod -aG docker $LOGNAME
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 echo "Configuring Docker namespace files"
 sudo touch /etc/subgid
@@ -42,4 +63,4 @@ echo "
 
 sudo systemctl restart docker
 
-echo "Done!"
+echo "Done, now you need to logout from your user and log back again"

@@ -1,26 +1,29 @@
 # Dotfiles, aliases & development settings for Linux
 
+## Whats included in this Dotfiles?
+
+- [Git autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
+- [Powerlevel10k ZSH Theme](https://github.com/romkatv/powerlevel10k)
+- [Tilix Terminal](https://gnunn1.github.io/tilix-web)
+- tilix.dconf file to match usual commands from iTerm on MacOS
+- [Apt Fast](http://patrickemuller.com/posts/installing-apt-fast-on-ubuntu)
+- Alias for Git, Rails, Docker & some useful functions to be used on terminal
+
+## What you need to install manually (and before everything else)
+- sudo apt-get install chrome-gnome-shell
+- [CPU power manager (intel_pstate only)](https://extensions.gnome.org/extension/945/cpu-power-manager/)
+
 ## Pre-requisites
 
 - Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
   - PS.: You can ignore the startup configuration. Just leave the configuration empty, those things will be setup when `./install.sh` runs
-- Install [Tilix Terminal](https://gnunn1.github.io/tilix-web)
 
 ## Optional steps
 
-- Install [Apt Fast](http://patrickemuller.com/posts/installing-apt-fast-on-ubuntu)
 - Install [TLP & TLP GUI](http://patrickemuller.com/posts/tlp-config-file-for-intel-processors)
 - Install [Conky & Conky manager](https://github.com/patrickemuller/dotfiles-linux-oh-my-zsh/wiki/Conky-Manager)
 - Install [SimpleC skin for Conky](https://github.com/patrickemuller/conky-simplec-one)
 - Download [a nice wallpaper](https://wallpaperflare.com)
-
-## What is included in this Dotfiles?
-
-- Auto completion from history (start typing the command and use arrow keys to autocomplete)
-- Auto completion for Git commands
-- Alias for Git, Rails, Docker & some useful functions to be used on terminal
-- tilix.dconf file to match usual commands from iTerm on MacOS
-- TLP config file to improve battery life on INTEL processors (can may work for AMD processors)
 
 ## Screenshot of terminal
 
@@ -28,37 +31,24 @@
 
 ## Installation
 
-### Install some Oh My ZSH plugins
-
-```shell
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
-```
+### Automatic script for fonts (easier to install, take lots of space)
 
 I'm using the powerlevel10k theme for my ZSH, so you gonna need to install the recommended fonts (I'm installing all
 of them, just in case, but the DOWNLOAD IS HUGE, more than 6 GiB of fonts)
-
-### Automatic script for fonts
 
 ```shell
 cd ~/Downloads
 git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh
 ```
 
-### Manual installation for fonts
+### Manual script for fonts (tricky to work, uses less space)
 
 Check this link to original Powerline10k instructions
 
 https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
-### Now you can install the Powerlevel10k Theme for ZSH
 
-```shell
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-Clone the repository whatever you want using:
+### Installing my configs
 
 ```shell
 git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
