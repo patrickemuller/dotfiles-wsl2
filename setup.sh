@@ -38,6 +38,12 @@ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 echo "Installing Powerlevel10k ZSH theme"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
+echo "Install Spotify Client"
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-fast update
+sudo apt-fast -y install spotify-client
+
 echo "Downloading GitKraken Git GUI on ~/Downloads"
 curl -fsSL https://release.gitkraken.com/linux/gitkraken-amd64.deb -o ~/Downloads/git_kraken.deb
 
