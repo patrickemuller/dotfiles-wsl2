@@ -2,6 +2,7 @@
 
 ## Whats included in this Dotfiles?
 
+- Gnome Tweaks Tool
 - [Git autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
 - [Powerlevel10k ZSH Theme](https://github.com/romkatv/powerlevel10k)
 - [Tilix Terminal](https://gnunn1.github.io/tilix-web)

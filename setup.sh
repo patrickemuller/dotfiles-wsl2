@@ -23,6 +23,9 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 echo "Installing APT FAST"
 /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
+echo "Installing Gnome Tweaks Tool"
+sudo apt-fast -y install gnome-tweaks
+
 echo "Install Tilix & restore configuration ..."
 sudo apt-fast -y install tilix
 dconf load /com/gexperts/Tilix/ < tilix.dconf
