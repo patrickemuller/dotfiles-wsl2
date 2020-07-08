@@ -40,8 +40,11 @@ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 echo "Installing Powerlevel10k ZSH theme"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
+echo "Creating Projects folder inside Home"
+cd ~ && mkdir Projects
+
 echo "Install Spotify Client"
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-fast update
 sudo apt-fast -y install spotify-client
@@ -66,8 +69,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo "Configuring Docker namespace files"
-sudo touch /etc/subgid
-sudo touch /etc/subuid
+sudo rm /etc/subgid && sudo touch /etc/subgid
+sudo rm /etc/subuid && sudo touch /etc/subuid
 echo "$LOGNAME:1000:1" | sudo tee -a /etc/subgid /etc/subuid
 echo "$LOGNAME:100000:65536" | sudo tee -a /etc/subgid /etc/subuid
 
