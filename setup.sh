@@ -52,6 +52,12 @@ curl -fsSL https://release.gitkraken.com/linux/gitkraken-amd64.deb -o ~/Download
 echo "Downloading Slack on ~/Downloads"
 curl -fsSL https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.3-amd64.deb -o ~/Downloads/slack.deb
 
+echo "Downloading Zoom on ~/Downloads"
+curl -fsSL https://zoom.us/client/latest/zoom_amd64.deb -o ~/Downloads/zoom.deb
+
+echo "Downloading Discord on ~/Downloads"
+curl -fsSL https://discord.com/api/download?platform=linux&format=deb -o ~/Downloads/discord.deb
+
 echo "Installing Docker & Docker Compose"
 curl -fsSL https://get.docker.com -o ~/Downloads/get-docker.sh
 sudo sh ~/Downloads/get-docker.sh
