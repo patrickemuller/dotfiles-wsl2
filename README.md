@@ -4,6 +4,11 @@
 
 - Gnome Tweaks Tool
 - [Spotify client](https://www.spotify.com/ee/download/linux/)
+- [GitKraken client](https://www.gitkraken.com/download)
+- [Slack client](https://slack.com/intl/pt-br/downloads/linux)
+- [Zoom plugin](https://zoom.us/download)
+- [Discord client](https://discord.com/new/download)
+- [DBeaver database manager](https://dbeaver.io/download/?start&os=linux&arch=x86_64&dist=deb)
 - [Git autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
 - [Powerlevel10k ZSH Theme](https://github.com/romkatv/powerlevel10k)
 - [Tilix Terminal](https://gnunn1.github.io/tilix-web)
