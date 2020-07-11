@@ -64,7 +64,9 @@ curl -fsSL https://discord.com/api/download?platform=linux&format=deb -o ~/Downl
 echo "Installing Docker & Docker Compose"
 curl -fsSL https://get.docker.com -o ~/Downloads/get-docker.sh
 sudo sh ~/Downloads/get-docker.sh
-sudo usermod -aG docker $LOGNAME
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
