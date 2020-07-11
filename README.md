@@ -51,7 +51,7 @@ https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel1
 
 1. Download the repository
 ```shell
-git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git
+cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git && cd dotfiles-linux-oh-my-zsh
 ```
 
 2. Run the command sh to copy files to your $HOME directory:
