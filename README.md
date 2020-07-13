@@ -7,6 +7,7 @@
 ## Whats included in this Dotfiles?
 
 - Gnome Tweaks Tool
+- [Postman App](https://www.postman.com/downloads/)
 - [Spotify client](https://www.spotify.com/ee/download/linux/)
 - [GitKraken client](https://www.gitkraken.com/download)
 - [Slack client](https://slack.com/intl/pt-br/downloads/linux)
