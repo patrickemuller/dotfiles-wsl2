@@ -54,6 +54,14 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'flameshot gui'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding 'Print'
 
+echo "Small tweaks for Ubuntu interface"
+gsettings set org.gnome.shell.window-switcher app-icon-mode 'app-icon-only'
+gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+gsettings set org.gnome.desktop.peripherals.mouse speed 0
+gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action nothing
+gsettings set org.gnome.mutter center-new-windows 'true'
+
 echo "Install Spotify Client"
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
