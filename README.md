@@ -72,3 +72,4 @@ cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-z
 - Download [a nice wallpaper](https://wallpaperflare.com)
 - sudo apt-get install chrome-gnome-shell
 - [CPU power manager (intel_pstate only)](https://extensions.gnome.org/extension/945/cpu-power-manager/)
+- [Gnome system monitor extension](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet)
