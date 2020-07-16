@@ -54,6 +54,11 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'flameshot gui'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding 'Print'
 
+echo "Installing PEEK screen recorder"
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt update -y
+sudo apt-fast -y peek
+
 echo "Small tweaks for Ubuntu interface"
 gsettings set org.gnome.shell.window-switcher app-icon-mode 'app-icon-only'
 gsettings set org.gnome.desktop.interface enable-animations false
