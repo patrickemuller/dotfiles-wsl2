@@ -54,6 +54,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'flameshot gui'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding 'Print'
 
+echo "Configuring Linux to set data by local-time (fixes different timezone for dual-boot)"
+timedatectl set-local-rtc 1 --adjust-system-clock
+
 echo "Installing PEEK screen recorder"
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update -y
