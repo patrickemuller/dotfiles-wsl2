@@ -15,3 +15,9 @@ delete_merged() {
     git branch --merged "$1" | grep -v "^[ *]*$1$" | xargs git branch -d
   fi
 }
+
+cleanup_docker() {
+  docker system prune
+  docker rmi $(docker ps -aq) -f
+  docker rmi $(docker images -q) -f
+}
