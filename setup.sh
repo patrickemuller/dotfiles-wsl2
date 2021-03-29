@@ -32,6 +32,11 @@ echo "Install Tilix & restore configuration ..."
 sudo apt-fast -y install tilix
 dconf load /com/gexperts/Tilix/ < tilix.dconf
 
+echo "Install BashTop"
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update
+sudo apt-fast -y install bashtop
+
 echo "Installing basic ZSH plugins"
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
