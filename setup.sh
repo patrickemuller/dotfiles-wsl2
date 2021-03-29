@@ -75,7 +75,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 echo "Installing PEEK screen recorder"
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update -y
-sudo apt-fast -y peek
+sudo apt-fast install -y peek
 
 echo "Small tweaks for Ubuntu interface"
 gsettings set org.gnome.shell.window-switcher app-icon-mode 'app-icon-only'
