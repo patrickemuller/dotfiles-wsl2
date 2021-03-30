@@ -74,7 +74,6 @@ cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-z
 
 ### Gnome extensions for performance dashboard
 - [Gnome vitals](https://extensions.gnome.org/extension/1460/vitals/)
-- [Gnome system monitor extension](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet)
 - [Gnome remove dropdown arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
 - [Gnome horizontal spacing status area](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
 - [Gnome Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
