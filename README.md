@@ -2,57 +2,214 @@
 
 ## Screenshot of terminal
 
-![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/81022753-ceff9c80-8e44-11ea-85d3-acf618fbd9e5.png)
+![monokai_dark_tilix_powerline01k](https://user-images.githubusercontent.com/1644530/127053332-75f38981-addc-49c7-80bb-c8747e8bf9df.png)
 
 ## Whats included in this Dotfiles?
 
-- Gnome Tweaks Tool
-- [Flameshot Printscreen](https://flameshot.js.org/)
-- [Postman App](https://www.postman.com/downloads/)
-- [GitKraken client](https://www.gitkraken.com/download)
-- [Slack client](https://slack.com/intl/pt-br/downloads/linux)
-- [Zoom plugin](https://zoom.us/download)
-- [Discord client](https://discord.com/new/download)
-- [DBeaver database manager](https://dbeaver.io/download/?start&os=linux&arch=x86_64&dist=deb)
 - [Git autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
 - [Powerlevel10k ZSH Theme](https://github.com/romkatv/powerlevel10k)
-- [Tilix Terminal](https://gnunn1.github.io/tilix-web)
-- tilix.dconf file to match usual commands from iTerm on MacOS
 - [Apt Fast](http://patrickemuller.com/posts/installing-apt-fast-on-ubuntu)
 - Alias for Git, Rails, Docker & some useful functions to be used on terminal
 
 ## Pre-requisites
 
+### Manual font installation
+
+Download these four ttf files:
+
+- [MesloLGS NF Regular.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+- [MesloLGS NF Bold.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+- [MesloLGS NF Italic.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+- [MesloLGS NF Bold Italic.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+### Manual things to do
+
+- Install Hyper Terminal on windows
+- Open Hyper preferences and copy the configuration from below
 - `sudo apt install -y git curl wget`
 - Configure your Git SSH key on Github
 - Install [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
   - PS.: You can ignore the startup configuration. Just leave the configuration empty, those things will be setup when `./install.sh` runs
 
-## Installation
+## Hyper configuration file
 
-### Automatic script for fonts (easier to install, take lots of space)
+```json
+// Future versions of Hyper may add additional config options,
+// which will not automatically be merged into this file.
+// See https://hyper.is#cfg for all currently supported options.
 
-I'm using the powerlevel10k theme for my ZSH, so you gonna need to install the recommended fonts (I'm installing all
-of them, just in case, but the DOWNLOAD IS HUGE, more than 6 GiB of fonts)
+module.exports = {
+  config: {
+    // choose either `'stable'` for receiving highly polished,
+    // or `'canary'` for less polished but more frequent updates
+    updateChannel: 'stable',
 
-```shell
-cd ~/Downloads
-git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh
+    // default font size in pixels for all tabs
+    fontSize: 14,
+
+    // font family with optional fallbacks
+    fontFamily: 'MesloLGS NF, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+
+    // default font weight: 'normal' or 'bold'
+    fontWeight: 'normal',
+
+    // font weight for bold characters: 'normal' or 'bold'
+    fontWeightBold: 'bold',
+
+    // line height as a relative unit
+    lineHeight: 1,
+
+    // letter spacing as a relative unit
+    letterSpacing: 0,
+
+    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
+    cursorColor: 'rgba(248,28,229,0.8)',
+
+    // terminal text color under BLOCK cursor
+    cursorAccentColor: '#000',
+
+    // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
+    cursorShape: 'BLOCK',
+
+    // set to `true` (without backticks and without quotes) for blinking cursor
+    cursorBlink: false,
+
+    // color of the text
+    foregroundColor: '#fff',
+
+    // terminal background color
+    // opacity is only supported on macOS
+    backgroundColor: '#000',
+
+    // terminal selection color
+    selectionColor: 'rgba(248,28,229,0.3)',
+
+    // border color (window, tabs)
+    borderColor: '#333',
+
+    // custom CSS to embed in the main window
+    css: '',
+
+    // custom CSS to embed in the terminal window
+    termCSS: '',
+
+    // if you're using a Linux setup which show native menus, set to false
+    // default: `true` on Linux, `true` on Windows, ignored on macOS
+    showHamburgerMenu: '',
+
+    // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
+    // additionally, set to `'left'` if you want them on the left, like in Ubuntu
+    // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
+    showWindowControls: '',
+
+    // custom padding (CSS format, i.e.: `top right bottom left`)
+    padding: '12px 14px',
+
+    // the full list. if you're going to provide the full color palette,
+    // including the 6 x 6 color cubes and the grayscale map, just provide
+    // an array here instead of a color map object
+    colors: {
+      black: '#000000',
+      red: '#C51E14',
+      green: '#1DC121',
+      yellow: '#C7C329',
+      blue: '#0A2FC4',
+      magenta: '#C839C5',
+      cyan: '#20C5C6',
+      white: '#C7C7C7',
+      lightBlack: '#686868',
+      lightRed: '#FD6F6B',
+      lightGreen: '#67F86F',
+      lightYellow: '#FFFA72',
+      lightBlue: '#6A76FB',
+      lightMagenta: '#FD7CFC',
+      lightCyan: '#68FDFE',
+      lightWhite: '#FFFFFF',
+    },
+
+    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
+    // if left empty, your system's login shell will be used by default
+    //
+    // Windows
+    // - Make sure to use a full path if the binary name doesn't work
+    // - Remove `--login` in shellArgs
+    //
+    // Bash on Windows
+    // - Example: `C:\\Windows\\System32\\bash.exe`
+    //
+    // PowerShell on Windows
+    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+
+    // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
+    // by default `['--login']` will be used
+    shell: 'C:\\Windows\\System32\\wsl.exe',
+    shellArgs: ['~'],
+
+    // for environment variables
+    env: {},
+
+    // set to `false` for no bell
+    bell: 'SOUND',
+
+    // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
+    copyOnSelect: false,
+
+    // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
+    defaultSSHApp: true,
+
+    // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
+    // selection is present (`true` by default on Windows and disables the context menu feature)
+    quickEdit: false,
+
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for example).
+    macOptionSelectionMode: 'vertical',
+
+    // URL to custom bell
+    // bellSoundURL: 'http://example.com/bell.mp3',
+
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+    webGLRenderer: false,
+
+    // for advanced config flags please refer to https://hyper.is/#cfg
+  },
+
+  // a list of plugins to fetch and install from npm
+  // format: [@org/]project[#version]
+  // examples:
+  //   `hyperpower`
+  //   `@company/project`
+  //   `project#1.0.1`
+  plugins: [
+    'hyperterm-monokai',
+    //'hyper-dracula',
+    'hyper-search'
+  ],
+
+  // in development, you can create a directory under
+  // `~/.hyper_plugins/local/` and include it here
+  // to load it and avoid it being `npm install`ed
+  localPlugins: [],
+
+  keymaps: {
+    // Example
+    // 'window:devtools': 'cmd+alt+o',
+  },
+};
 ```
 
-### Manual script for fonts (tricky to work, uses less space)
-
-Check this link to original Powerline10k instructions
-
-https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
-
-
-### Installing my configs
+## Installation
 
 1. Download the repository
 ```shell
-cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-zsh.git && cd dotfiles-linux-oh-my-zsh
+cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-wsl2.git && cd dotfiles-wsl2
 ```
 
 2. Run the command sh to copy files to your $HOME directory:
@@ -60,20 +217,3 @@ cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-linux-oh-my-z
 ```shell
 ./setup.sh
 ```
-
-3. Logout from your user and login back so the configs can take effect
-
-## Optional steps
-
-- Install [TLP & TLP GUI](http://patrickemuller.com/posts/tlp-config-file-for-intel-processors)
-- Install [Conky & Conky manager](https://github.com/patrickemuller/dotfiles-linux-oh-my-zsh/wiki/Conky-Manager)
-- Install [SimpleC skin for Conky](https://github.com/patrickemuller/conky-simplec-one)
-- Download [a nice wallpaper](https://wallpaperflare.com)
-- sudo apt-get install chrome-gnome-shell
-- [CPU power manager (intel_pstate only)](https://extensions.gnome.org/extension/945/cpu-power-manager/)
-
-### Gnome extensions for performance dashboard
-- [Gnome vitals](https://extensions.gnome.org/extension/1460/vitals/)
-- [Gnome remove dropdown arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
-- [Gnome horizontal spacing status area](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
-- [Gnome Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
