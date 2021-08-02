@@ -83,6 +83,7 @@ plugins=(
     docker-compose
     git
     k
+    asdf
 )
 
 source $ZSH/oh-my-zsh.sh
