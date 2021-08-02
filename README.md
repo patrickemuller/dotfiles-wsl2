@@ -31,11 +31,6 @@ Download these four ttf files:
 
 - Install Hyper Terminal on windows (Or Windows Terminal, both config files included)
 - Open Hyper/Windows Terminal preferences and copy the configuration from below
-- `sudo apt install -y git curl wget`
-- Configure your Git SSH key on Github
-- Install [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
-  - PS.: You can ignore the startup configuration. Just leave the configuration empty, those things will be setup when `./install.sh` runs
 
 ££ Windows Terminal configuration file
 ```js
