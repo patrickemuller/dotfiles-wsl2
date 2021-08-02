@@ -88,4 +88,6 @@ alias dce="docker exec -it"
 # ----------------------------------------------------------------------
 
 alias update="sudo apt-fast update"
+alias upgrade="sudo apt-fast upgrade -y"
 alias install="sudo apt-fast install -y"
+alias wget="aria2c --file-allocation=none -c -x 10 -s 10"
