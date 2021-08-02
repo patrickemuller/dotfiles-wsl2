@@ -544,5 +544,6 @@ cd ~/Downloads && git clone https://github.com/patrickemuller/dotfiles-wsl2.git 
 2. Run the command sh to copy files to your $HOME directory:
 
 ```shell
+./zsh.sh
 ./setup.sh
 ```

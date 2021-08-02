@@ -6,13 +6,8 @@ declare -r -a FILES_TO_SOURCE=(
   "gitconfig"
   "bash_aliases"
   "bash_functions"
-  "zshrc"
   "p10k.zsh"
 )
-
-echo "Installing ZSH"
-sudo apt install zsh
-chsh -s $(which zsh)
 
 echo "Installing APT FAST"
 sudo add-apt-repository ppa:apt-fast/stable
@@ -52,12 +47,12 @@ git config --global user.name $username
 read -p "Enter Your Email: " email
 git config --global user.email $email
 
-ssh-keygen -t ed25519 -C $email
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-echo "\n ======= COPY THIS SSH KEY TO YOUR GITHUB ACCOUNT ======== \n"
-cat ~/.ssh/id_ed25519.pub
-echo "\n ======= COPY THIS SSH KEY TO YOUR GITHUB ACCOUNT ======== \n"
+# ssh-keygen -t ed25519 -C $email
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519
+# echo "\n ======= COPY THIS SSH KEY TO YOUR GITHUB ACCOUNT ======== \n"
+# cat ~/.ssh/id_ed25519.pub
+# echo "\n ======= COPY THIS SSH KEY TO YOUR GITHUB ACCOUNT ======== \n"
 
 echo "Installing Rbenv and Ruby-build (always good to have, and also some packages for Rails Environment)"
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
