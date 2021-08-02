@@ -6,6 +6,7 @@
 
 ## Whats included in this Dotfiles?
 
+- aria2 (wget speed improvement)
 - [Git autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
 - [Powerlevel10k ZSH Theme](https://github.com/romkatv/powerlevel10k)
 - [Apt Fast](http://patrickemuller.com/posts/installing-apt-fast-on-ubuntu)
