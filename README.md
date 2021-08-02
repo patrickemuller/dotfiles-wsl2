@@ -538,7 +538,7 @@ module.exports = {
 
 1. Download the repository
 ```shell
-cd ~/Downloads && git clone git@github.com:patrickemuller/dotfiles-wsl2.git && cd dotfiles-wsl2
+cd ~/Downloads && git clone https://github.com/patrickemuller/dotfiles-wsl2.git && cd dotfiles-wsl2
 ```
 
 2. Run the command sh to copy files to your $HOME directory:
